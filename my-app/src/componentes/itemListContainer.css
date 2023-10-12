@@ -1,0 +1,21 @@
+.product {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 15px;
+  background-color: rgb(255, 235, 205);
+}
+
+.nameProduct {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.imgProduct {
+  width: 25%;
+  max-width: 25%;
+}
+
+.product p {
+  padding: 5px;
+  font-size: 1.2em;
+}
