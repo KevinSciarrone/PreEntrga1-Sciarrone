@@ -1,0 +1,87 @@
+[
+  {
+    "id": 1,
+    "nombre": "Cerveza Andes roja 473cc",
+    "categoria": "cervezas",
+    "img": "https://cepadevinos.com/wp-content/uploads/2021/08/CervezaAndesRojita269ml_grande3.png",
+    "precio": 699,
+    "detalle": "La Andes origen Rojita, color ámbar cobrizo, es una cerveza de deleite. Ideal para acompañar pescados o carnes rojas, elaborados con verduras frescas o grilladas. Pastas, ya sean con o sin relleno, con salsas suaves de tomate o con un toque de crema. Crumble de manzana o de pera.",
+    "tipo": "Roja",
+    "alcohol": "5,1%"
+  },
+
+  {
+    "id": 2,
+    "nombre": "Cerveza Corona 710cc",
+    "img": "https://cepadevinos.com/wp-content/uploads/2017/03/Cerveza-Corona-710Cc-CERVEZA-CORONA-DESC-X710ML-1-571.jpg",
+    "categoria": "cervezas",
+    "precio": 1759,
+    "detalle": "Corona es una cerveza premium, clásica y auténtica, reconocida mundialmente por su alta calidad, su sabor distintivo e imagen. Es una cerveza que transmite tranquilidad y relajación, invitando a los consumidores a desconectarse de la monotonía diaria a través de experiencias agradables.",
+    "tipo": "Clasica",
+    "alcohol": "4.5"
+  },
+
+  {
+    "id": 3,
+    "nombre": "La Linda Chardonnay",
+    "img": "https://cepadevinos.com/wp-content/uploads/2017/07/Finca_La_Linda_Chardonnay_x30rq3.jpg",
+    "categoria": "vinos",
+    "precio": 460,
+    "detalle": "Es un vino de color amarillo brillante con reflejos dorados y verdosos. Sus intensos aromas frutales típicos de la variedad, que recuerdan a pera, manzana verde y durazno blanco, son una clara evidencia de su juventud. En boca es fresco, vivaz, de cuerpo medio y sin aristas, por lo que resulta un blanco bien frutado y con una equilibrada acidez.",
+    "bodega": "Finca La Linda",
+    "tipo": "Blanco",
+    "variedad": "Chardonnay Unoaked",
+    "corte": "Chardonnay Unoaked100 %",
+    "alcohol": "13,5 %"
+  },
+
+  {
+    "id": 4,
+    "nombre": "Familia Gascón Roble Malbec",
+    "categoria": "vinos",
+    "img": "https://cepadevinos.com/wp-content/uploads/2016/09/familia-gascon-roble-malbec.jpg",
+    "precio": 2.699,
+    "detalle": "De color rojo violáceo intenso. Sus aromas recuerdan a ciruelas rojas maduras y frutas negras. En boca presenta una buena concentración, con taninos que aportan suavidad y redondes.Añejado 50% en roble francés y 50% en roble americano. Tiempo en roble: 8 meses.",
+    "bodega": "Escorihuela Gascon",
+    "tipo": "Tinto",
+    "variedad": "Malbec",
+    "corte": "Malbec 100 %",
+    "alcohol": "14,5 %"
+  },
+
+  {
+    "id": 5,
+    "nombre": "Salentein Cuvée Excepcionnelle Brut Nature",
+    "categoria": "vinos",
+    "img": "https://cepadevinos.com/wp-content/uploads/2016/09/salentein.png",
+    "precio": 460,
+    "detalle": "Temperatura de servicio de este espumante es de 6º C. Potencial de guarda unos 3 años. Conservar en lugar fresco, oscuro, y sin vibraciones. Ideal para maridar con un strudel de queso con uvas.",
+    "bodega": "Salentein",
+    "tipo": "Espumante",
+    "variedad": "Blend",
+    "corte": "Chardonnay 60 % Pinot Noir 40 %",
+    "alcohol": "13 %"
+  },
+  {
+    "id": 6,
+    "nombre": "Chivas Mizunara",
+    "img": "https://cepadevinos.com/wp-content/uploads/2021/09/be73145.jpg",
+    "categoria": "Whisky",
+    "precio": 35599,
+    "detalle": "El primer whisky escocés en el mundo con un selectivo añejamiento* en barricas de roble japonés Mizunara. Chivas Mizunara es la fusión perfecta del arte escocés con la tradición japonesa que da como resultado una mezcla increíblemente sofisticada. Un maravilloso whisky con toque de especias. Porque el éxito está en la mezcla, tanto en la vida como en el escocé",
+    "tipo": "Scotish Whiskey",
+    "bodega": "Chivas",
+    "alcohol": "40 %"
+  },
+  {
+    "id": 7,
+    "nombre": "Jameson Irish Whiskey",
+    "img": "https://cepadevinos.com/wp-content/uploads/2020/11/jameson-estuche1-b1fb835f4526d72b7716218164831082-1024-1024.png",
+    "categoria": "Whisky",
+    "precio": 12999,
+    "detalle": "Color dorado cálido. Aroma Suave y fragante, con notas de madera tostada y jerez. Su sabor es excepcionalmente suave, dulce y complejo. Delicada fusión de sabores tales como vainilla, madera de roble, miel, complementados por especias, caramelo y nuez. De final delicado y persistente en el paladar. Su mayor suavidad se debe gracias a su triple destilación. De sabor agradable, no ahumado por la no utilización de turba en el proceso de malteado de la cebada. Jameson utiliza un porcentaje mayor de barricas de Jerez para la maduración de sus whiskies lo que otorga su particular aroma y color ámbar rojizo. Jameson es el whiskey Irlandés Nº 1 del Mundo",
+    "tipo": "Irish Whiskey",
+    "bodega": "Jameson",
+    "alcohol": "40 %"
+  }
+]

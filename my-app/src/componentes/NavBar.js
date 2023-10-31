@@ -1,66 +1,65 @@
 import React from "react";
 import "./CartWidget.js";
 import CartWidget from "./CartWidget.js";
+import { Link, NavLink } from "react-router-dom";
 
-function NavBar() {
+const NavBar = () => {
   return (
-    <div>
-      <nav
-        className="navbar navbar-expand-lg bg-dark border-bottom border-body"
-        data-bs-theme="dark"
-      >
-        <div className="container-fluid">
-          <button className="navbar-brand" href="#">
-            El Rincón de las Copas
-          </button>
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav">
-              <li className="nav-item">
-                <button
-                  className="nav-link active"
-                  aria-current="page"
-                  href="#"
-                >
-                  Productos
-                </button>
-              </li>
-              <li className="nav-item">
-                <button className="nav-link active" href="">
-                  Cervezas
-                </button>
-              </li>
-              <li className="nav-item">
-                <button className="nav-link active" href="#">
-                  Vinos
-                </button>
-              </li>
-              <li className="nav-item">
-                <button className="nav-link active" href="#">
-                  Espumante
-                </button>
-              </li>
-              <li className="nav-item">
-                <button className="nav-link active" href="#">
-                  <CartWidget />
-                </button>
-              </li>
-            </ul>
-          </div>
+    <div className="container" id="navbar">
+      <div className="row">
+        <div className="col-6">
+          <nav className="navbar navbar-expand-lg ">
+            <div className="container-fluid">
+              <Link className="navbar-brand" to={"/"}>
+                <img
+                  src="https://previews.123rf.com/images/benidict83/benidict832011/benidict83201100045/159491387-tienda-de-licores-botella-de-whisky-ron-o-brandy.jpg"
+                  alt="liquori l'ubriaco"
+                  width={100}
+                />
+              </Link>
+              <button
+                className="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span className="navbar-toggler-icon"></span>
+              </button>
+              <div className="collapse navbar-collapse" id="navbarNav">
+                <ul className="navbar-nav">
+                  <li className="nav-item">
+                    <NavLink
+                      className="nav-link"
+                      aria-current="page"
+                      to={"/category/cervezas"}
+                    >
+                      Cervezas
+                    </NavLink>
+                  </li>
+                  <li className="nav-item">
+                    <NavLink className="nav-link" to={"/category/vinos"}>
+                      Vinos
+                    </NavLink>
+                  </li>
+                  <li className="nav-item">
+                    <NavLink className="nav-link" to={"/category/Whisky"}>
+                      Whisky
+                    </NavLink>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
         </div>
-      </nav>
+        <div className="col-6 d-flex justify-content-end  align-items-center">
+          <CartWidget />
+        </div>
+      </div>
     </div>
   );
-}
+};
 
 export default NavBar;
