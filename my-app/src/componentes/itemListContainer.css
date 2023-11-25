@@ -1,21 +1,39 @@
 .product {
   border: 1px solid #ccc;
-  padding: 20px;
-  margin: 20px;
-  background-color: rgb(255, 235, 205);
+  padding: 10px;
+  margin: 10px;
+  background-color: rgb(239, 232, 220);
 }
 
+body {
+  background-color: rgb(222, 208, 182);
+}
 .nameProduct {
   font-size: 1.5em;
   font-weight: bold;
 }
 
 .imgProduct {
-  width: 25%;
-  max-width: 25%;
+  width: 40%;
+  height: auto;
 }
 
-.product p {
+.product-p {
   padding: 5px;
   font-size: 1.2em;
+}
+
+.nav {
+  background-color: rgb(250, 238, 209);
+  height: 100%;
+}
+.nav li {
+  background-image: linear-gradient(90deg, rgb(61, 61, 62), rgb(16, 16, 17));
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  background-position: left bottom;
+  transition: backgound-size 700ms ease-in-out;
+}
+.nav li:hover {
+  background-size: 100% 2px;
 }

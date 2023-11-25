@@ -1,0 +1,25 @@
+.detail {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+}
+
+.detail-content {
+  flex: 1;
+  margin-left: 20px;
+}
+
+.detail p {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 30px;
+  font-size: 1.2rem;
+}
+
+.detail img {
+  border-style: double;
+  width: 20%;
+  height: 30;
+}

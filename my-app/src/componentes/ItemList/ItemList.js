@@ -1,5 +1,5 @@
 import React from "react";
-import Items from "../Item/Items";
+import Item from "../Item/Item";
 import "../itemListContainer.css";
 
 const ItemList = ({ item }) => {
@@ -7,7 +7,7 @@ const ItemList = ({ item }) => {
     <div className="row" id="itemlist">
       {item.map((item) => (
         <div className="col-md-3" key={item.id}>
-          <Items item={item} />
+          <Item item={item} />
         </div>
       ))}
     </div>

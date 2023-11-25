@@ -1,0 +1,23 @@
+.counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button.operacion {
+  background-color: rgb(184, 233, 148);
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+  font-size: 18px;
+  transition: background-color 0.3s;
+}
+
+button.operacion:disabled {
+  background-color: rgb(209, 216, 224);
+  color: rgb(128, 142, 155);
+  cursor: not-allowed;
+}

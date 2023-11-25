@@ -1,9 +1,8 @@
 import React from "react";
 import { useState } from "react";
 
-const ItemCount = ({ stockItems }) => {
-  const [counter, setCounter] = useState(1);
-  const [stock, setStock] = useState(stockItems);
+const ItemCount = ({ initial, stock, onAdd }) => {
+  const [counter, setCounter] = useState(parseInt(initial));
   const incrementarStock = () => {
     if (counter < stock) {
       setCounter(counter + 1);
@@ -15,41 +14,36 @@ const ItemCount = ({ stockItems }) => {
     }
   };
   return (
-    <div className="container" id="itemcount">
-      <div className="row mb-3">
-        <div className="col-md-2">
-          <div
-            className="btn-group"
-            role="group"
-            aria-label="Basic outlined example"
-          >
-            <button
-              type="button"
-              className="btn btn-outline-primary"
-              onClick={decrementarStock}
-            >
-              -
-            </button>
-            <button type="button" className="btn btn-outline-primary">
-              {counter}
-              {setStock}
-            </button>
-            <button
-              type="button"
-              className="btn btn-outline-primary"
-              onClick={incrementarStock}
-            >
-              +
-            </button>
-          </div>
-        </div>
+    <div className="counter">
+      <div
+        className="btn-group"
+        role="group"
+        aria-label="Basic outlined example"
+      >
+        <button
+          disabled={counter <= 1}
+          onClick={decrementarStock}
+          className="operacion"
+        >
+          -
+        </button>
+        <span>{counter}</span>
+        <button
+          disabled={counter >= stock}
+          onClick={incrementarStock}
+          className="operacion"
+        >
+          +
+        </button>
       </div>
-      <div className="row">
-        <div className="col-md-2">
-          <button type="button" className="btn btn-outline-primary">
-            Agregar al carrito
-          </button>
-        </div>
+      <div>
+        <button
+          disabled={stock <= 0}
+          onClick={() => onAdd(counter)}
+          className="operacion"
+        >
+          Agregar al carrito
+        </button>
       </div>
     </div>
   );

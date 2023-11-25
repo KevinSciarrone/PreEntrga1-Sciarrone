@@ -1,10 +1,21 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import { initializeApp } from "firebase/app";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const firebaseConfig = {
+  apiKey: "AIzaSyBwAE7XTm8BFvx8wEdiSHHIQebMHx9FVzs",
+  authDomain: "coderhouse-ecomerce-84e7a.firebaseapp.com",
+  projectId: "coderhouse-ecomerce-84e7a",
+  storageBucket: "coderhouse-ecomerce-84e7a.appspot.com",
+  messagingSenderId: "403502975941",
+  appId: "1:403502975941:web:4ea87c2cce86cb337459ac",
+};
+initializeApp(firebaseConfig);
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <App />
