@@ -1,7 +1,9 @@
 import React from "react";
+import { useCartContext } from "../Context/CartContext";
 import "./itemCart.css";
 
-const ItemCart = ({ item, removeItem }) => {
+const ItemCart = ({ item }) => {
+  const { removeItem } = useCartContext();
   return (
     <div className="itemCart">
       <img src={item.image} alt={item.title} />

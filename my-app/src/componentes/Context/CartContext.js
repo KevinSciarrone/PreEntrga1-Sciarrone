@@ -13,19 +13,8 @@ export const useCartContext = () => {
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
 
-  const addToCart = (item, quantity) => {
-    if (isInCart(item.id)) {
-      setCart(
-        cart.map((product) => {
-          return product.id === item.id
-            ? { ...product, quantity: product.quantity + quantity }
-            : product;
-        })
-      );
-    } else {
-      setCart([...cart, { ...item, quantity }]);
-    }
-  };
+  const addToCart = (item, quantity) =>
+    setCart([...cart, { ...item, quantity: quantity }]);
 
   const isInCart = (id) =>
     cart.find((product) => product.id === id) ? true : false;

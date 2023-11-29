@@ -9,9 +9,20 @@ const ItemDetailContainer = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    const queryDb = getFirestore();
-    const queryDoc = doc(queryDb, "items", id);
-    getDoc(queryDoc).then((res) => setItem({ id: res.id, ...res.data() }));
+    const fetchItem = async () => {
+      const queryDb = getFirestore();
+      const queryDoc = doc(queryDb, "items", id);
+      const docSnapshot = await getDoc(queryDoc);
+
+      if (docSnapshot.exists()) {
+        const itemData = { id: docSnapshot.id, ...docSnapshot.data() };
+        console.log("ItemDetailContainer itemData:", itemData);
+        setItem(itemData);
+      } else {
+        console.log("No se encontró el elemento en la base de datos.");
+      }
+    };
+    fetchItem();
   }, [id]);
 
   return (

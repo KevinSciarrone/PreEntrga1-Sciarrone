@@ -17,13 +17,11 @@ const Cart = () => {
 
   return (
     <>
-      {cart.find((items) => (
-        <ItemCart key={items.id} items={items} />
+      {cart.map((item) => (
+        <ItemCart key={item.id} item={item} />
       ))}
-      <p>total: $ {totalPrice()}</p>
-
+      <p>Total: $ {totalPrice()}</p>
       <Link to="/checkout">
-        {" "}
         <button className="btn-total">Finalizar Compra</button>
       </Link>
     </>

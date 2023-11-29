@@ -5,12 +5,14 @@ import { useCartContext } from "../componentes/Context/CartContext";
 import "../ItemDetail/detail.css";
 
 const ItemDetail = ({ item }) => {
+  console.log("ItemDetail item:", item);
   const [goToCart, setGoToCart] = useState(false);
   const { addToCart } = useCartContext();
   const onAdd = (quantity) => {
     setGoToCart(true);
     addToCart(item, quantity);
   };
+  console.log("ItemDetail goToCart:", goToCart);
 
   return (
     <div className="detail">
@@ -21,9 +23,11 @@ const ItemDetail = ({ item }) => {
         <p>{item.description}</p>
         <p> Cantidad: {item.stock}</p>
         {goToCart ? (
-          <Link to="/cart">Terminar compra</Link>
+          <Link to="/cart">
+            <button className="btn-total">Finalizar Compra</button>r
+          </Link>
         ) : (
-          <ItemCount stock={10} initial={0} onAdd={onAdd} />
+          <ItemCount stock={item.stock} initial={0} onAdd={onAdd} />
         )}
       </div>
     </div>

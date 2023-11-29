@@ -20,7 +20,7 @@ export const Checkout = () => {
   const [error, setError] = useState("");
   const [ordenId, setOrdenId] = useState("");
 
-  const { cart, removeProduct, totalPrice } = useCartContext();
+  const { cart, removeItem, totalPrice } = useCartContext();
 
   const manejadorFormulario = (event) => {
     event.preventDefault();
@@ -36,10 +36,10 @@ export const Checkout = () => {
     }
     const total = totalPrice();
     const orden = {
-      items: cart.map((producto) => ({
-        id: producto.id,
-        nombre: producto.title,
-        cantidad: producto.quantity,
+      items: cart.map((item) => ({
+        id: item.id,
+        nombre: item.title,
+        cantidad: item.quantity,
       })),
       total: total,
       fecha: new Date(),
@@ -50,15 +50,15 @@ export const Checkout = () => {
     };
 
     Promise.all(
-      orden.items.map(async (productoOrden) => {
+      orden.items.map(async (itemOrden) => {
         const db = getFirestore();
-        const productoRef = doc(db, "products", productoOrden.id);
+        const itemRef = doc(db, "items", itemOrden.id);
 
-        const productoDoc = await getDoc(productoRef);
-        const stockActual = productoDoc.data().stock;
+        const itemDoc = await getDoc(itemRef);
+        const stockActual = itemDoc.data().stock;
 
-        await updateDoc(productoRef, {
-          stock: stockActual - productoOrden.cantidad,
+        await updateDoc(itemRef, {
+          stock: stockActual - itemOrden.cantidad,
         });
       })
     )
@@ -67,7 +67,7 @@ export const Checkout = () => {
         addDoc(collection(db, "orders"), orden)
           .then((docRef) => {
             setOrdenId(docRef.id);
-            removeProduct();
+            removeItem();
           })
           .catch((error) => {
             console.log("Error en creacon de orden", error);
@@ -93,13 +93,13 @@ export const Checkout = () => {
       </h2>
 
       <form onSubmit={manejadorFormulario}>
-        {cart.map((producto) => (
-          <div className="item-check" key={producto.id}>
+        {cart.map((item) => (
+          <div className="item-check" key={item.id}>
             <p>
               {" "}
-              {producto.nombre} {producto.cantidad}
+              {item.nombre} {item.cantidad}
             </p>
-            <p> {producto.precio} </p>
+            <p> {item.precio} </p>
           </div>
         ))}
 
