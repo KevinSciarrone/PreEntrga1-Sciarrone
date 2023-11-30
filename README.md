@@ -9,4 +9,4 @@ Documentation
 Netilfy: https://6567b9aae9938424943df7af--startling-snickerdoodle-692de9.netlify.app/
 
 🔗 Links
-linkedin
+linkedin: https://www.linkedin.com/in/kevin-sebastian-sciarrone-7b85a9283/
