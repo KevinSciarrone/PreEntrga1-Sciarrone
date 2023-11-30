@@ -1,12 +1,12 @@
-Mi proyecto ⚽
+Mi proyecto
+
 Mi pagina web se trata de un e-comerce llamado Liquore L'briaco que como su nombre muy original dice es sobre venta de alcohol.
 
-Las herramientas que utilice fueron: ⚙️
-HTML5
-CSS3
-BOOTSTRAP
-REACT
+🛠 Skills
+HTML5 CSS3 BOOTSTRAP REACT
 
-Les comparto los link: 👇
-link deployment: https://github.com/KevinSciarrone/PreEntrga1-Sciarrone/settings/pages
-link vercel : https://proyecto-final-react-sciarrone.vercel.app/
+Documentation
+Netilfy: https://6567b9aae9938424943df7af--startling-snickerdoodle-692de9.netlify.app/
+
+🔗 Links
+linkedin
